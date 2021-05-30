@@ -1,6 +1,4 @@
-.botoes{
-
-    background-color: #D2691E;
-    color: #8080ff;
-    border: 1px outset;
+.btn{
+	border-radius: 15px;
+	margin: 8px;
 }
