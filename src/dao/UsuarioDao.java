@@ -7,9 +7,10 @@ import util.JPAUtil;
 
 public class UsuarioDao {
 	
-	static EntityManager em = JPAUtil.criarEM();
+	static EntityManager em;
 	
 	public static void salvar(Usuario usuario) {
+		em = JPAUtil.criarEM();
 		em.getTransaction().begin();
 		em.persist(usuario);
 		em.getTransaction().commit();

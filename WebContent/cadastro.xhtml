@@ -8,40 +8,55 @@
 	
 	<h:head>
 		<title>Cadastro</title>
-	 	<link rel="stylesheet" type="text/css" href="css/estilos.css"/>
+	 	<link rel="stylesheet" type="text/css" href="css/estilo.css"/>
 	</h:head>
 	
 	<h:body>
-		<div>
-		
+	
+		<div class="container">	
 			<h:form id="cadastro">
 			
-				<p:panelGrid columns="2" style="width:600px">
+				<p:panelGrid columns="2" style="width:600px; color: green" class="container">
 		
 					<p:outputLabel value="Nome completo:"/>
-					<p:inputText value="#{usuarioBean.usuario.nome}" style="width:300px"/>
+					<p:inputText required="true" value="#{usuarioBean.usuario.nome}" style="width:300px"/>
 			
 					<p:outputLabel value="Email:"/>
-					<p:inputText value="#{usuarioBean.usuario.email}" placeholder="exemplo@gmail.com" style="width:300px"/>
+					<p:inputText required="true" value="#{usuarioBean.usuario.email}" placeholder="exemplo@gmail.com" style="width:300px"/>
 			
 					<p:outputLabel value="CPF: "/>
-					<p:inputMask id="telefone" value="#{usuarioBean.usuario.cpf}" mask="999.999.999-99" validateMask="true" style="width:130px"/>
+					<p:inputMask id="cpf" required="true" value="#{usuarioBean.usuario.cpf}" mask="999.999.999-99" validateMask="true" style="width:130px"/>
+					
+					<p:outputLabel value="Sexo"/>
+					<p:selectOneRadio id="sexo" required="true" value="#{usuarioBean.usuario.sexo}" unselectable="true" >
+            			<f:selectItem itemLabel="Masculino" itemValue="M"/>
+            			<f:selectItem itemLabel="Feminino" itemValue="F"/>
+        			</p:selectOneRadio>
 			
 					<p:outputLabel value="Data de nascimento:"/>
-					<p:inputMask mask="99/99/9999" validateMask="true" style="width:130px"/>
+					<p:inputMask  mask="99/99/9999" required="true" validateMask="true" style="width:130px"/>
 
 					<p:outputLabel value="Telefone:"/>
-					<p:inputMask value="#{usuarioBean.usuario.telefone}" mask="(99)99999-9999" validateMask="true" style="width:130px"/>
-			
-					<p:outputLabel value="Senha: "/>
-					<p:inputText value="#{usuarioBean.usuario.senha}" style="width:130px"/>
-		
+					<p:inputMask value="#{usuarioBean.usuario.telefone}" required="true" mask="(99)99999-9999" validateMask="true" style="width:130px"/>
+					
+					<p:outputLabel value="Senha: "/>	
+                	<p:password id="pwd1" required="true" value="#{usuarioBean.usuario.senha}" match="pwd2" label="Senha" style="width:130px"/>
+           				 
+            		<p:outputLabel for="pwd2" value="Confirme sua senha:"/>
+                	<p:password id="pwd2" value="#{usuarioBean.usuario.senha}" label="Password 2" required="true" style="width:130px"/>
+					
 				</p:panelGrid>
 		
-				<p:commandButton class="btn" value="Cadastrar" action="#{usuarioBean.salvar}" style="width:150px"/>			
-				
+				<p:commandButton class="btn_entrar" value="Cadastrar" action="#{usuarioBean.salvar}" update="cadastro" style="width:150px; margin-left: auto"/>
+							
+				<p:messages id="messages" showDetail="true">
+          	    	<p:autoUpdate/>
+        		</p:messages>
 			</h:form>
 		</div>
+		<script>
+			
+		</script>
 
 	</h:body>
 </html>

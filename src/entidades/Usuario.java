@@ -1,10 +1,10 @@
 package entidades;
 
-import java.util.Date;
-
+import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 
+@Entity
 public class Usuario {
 	@Id
 	@GeneratedValue
@@ -12,8 +12,7 @@ public class Usuario {
 	private String nome;
 	private String senha;
 	private String cpf;
-	private Date dataNascimento;
-	private Endereco enereco;
+	private String dataNascimento;
 	private String sexo;
 	private String telefone;
 	private String email;
@@ -67,19 +66,11 @@ public class Usuario {
 		this.cpf = cpf;
 	}
 	
-	public Endereco getEnereco() {
-		return enereco;
-	}
-	
-	public void setEnereco(Endereco enereco) {
-		this.enereco = enereco;
-	}
-	
-	public Date getDataNascimento() {
+	public String getDataNascimento() {
 		return dataNascimento;
 	}
 	
-	public void setDataNascimento(Date dataNascimento) {
+	public void setDataNascimento(String string) {
 		this.dataNascimento = dataNascimento;
 	}
 	

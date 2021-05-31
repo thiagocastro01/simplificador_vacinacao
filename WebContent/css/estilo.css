@@ -2,3 +2,39 @@
 	border-radius: 15px;
 	margin: 8px;
 }
+
+.container {
+	width: 960px;
+	height: 600px;
+	background-color: #8080ff;
+	margin: 0 auto 0 auto;
+	position: relative;
+}
+
+.btn_entrar{
+	color: #8000ff;
+	top: 5px;
+	left: 360px;
+}
+
+.btn_logar{
+	color: #8000ff;
+	top: 5px;
+	left: 430px;
+}
+
+.contein {
+	width: 960px;
+	height: 600px;
+	background-color: #8080ff;
+	margin: 0 auto 0 auto;
+	position: relative;
+}
+
+.btn2{
+	width: 350px;
+	height: 150px;
+	background-color: #8080ff;
+	margin: 0 auto 0 auto;
+	position: relative;
+}
