@@ -17,6 +17,7 @@
 	left: 360px;
 }
 
+
 .btn_logar{
 	color: #8000ff;
 	top: 5px;
@@ -37,4 +38,19 @@
 	background-color: #8080ff;
 	margin: 0 auto 0 auto;
 	position: relative;
+}
+
+
+
+.btn_voltar{
+	color: #8000ff; 
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, 2%);
+	padding: 15px 20px;
+	border: 1px solid #eee;
+	border-radius: 6px;	
+	font-size: 18px;
+	background: #0000;
 }

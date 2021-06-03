@@ -13,11 +13,11 @@
 	</h:head>
 	
 	<h:body>
-		 <div class="card">
+		 <div>
         
       	<p:dataTable id="checkboxDT" var="vacina" value="#{vacinaBean.lista}"
-                     selection="#{dtSelectionView.selectedProducts}" rowKey="#{vacina.id}"
-                     style="margin-bottom:0" paginator="true" rows="5" selectionPageOnly="false">
+                     selection="#{vacinaBean.vacinasSelecionadas}" rowKey="#{vacina.id}"
+                     style="margin-bottom:0" paginator="true" rows="7" selectionPageOnly="false">
             <p:column selectionMode="multiple" style="width:16px;text-align:center"/>
             
             <p:column headerText="Id">
@@ -40,18 +40,30 @@
                 <h:outputText value="#{vacina.intervaloEntreDoses}" />
             </p:column>
             
-            <p:column headerText="Intervalo entre doses">
+            <p:column headerText="Idade inicial">
                 <h:outputText value="#{vacina.faixaEtariaInicial}" />
             </p:column>
             
-             <p:column headerText="Intervalo entre doses">
+             <p:column headerText="Idade final">
                 <h:outputText value="#{vacina.faixaEtariaFinal}" />
             </p:column>
             
         </p:dataTable>
-			
-			
+        
+       
+        <div style="position: relative">
+			<p:linkButton value="Enviar" outcome="dashboard"  style="color: #8000ff; position: absolute;
+				top: 50%;
+				left: 50%;
+	    		transform: translate(-50%, 2%);
+	    		padding: 15px 20px;
+	    		border: 1px solid #eee;
+	    		border-radius: 6px;
+	    		background-color: #00000	;
+	    		font-size: 18px;"/>
+			</div>
     </div>
+    
 	</h:body>
 
 </html>

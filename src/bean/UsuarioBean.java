@@ -21,7 +21,7 @@ public class UsuarioBean {
 		FacesMessage message = new FacesMessage(FacesMessage.SEVERITY_INFO, "Sucesso", "Cadastro feito com sucesso!");
         PrimeFaces.current().dialog().showMessageDynamic(message);
 		usuario = new Usuario();
-		return null;
+		return "vacinaSel?faces-redirect=true";
 	}
 
 	public Usuario getUsuario() {
