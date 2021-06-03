@@ -14,6 +14,7 @@ import entidades.Usuario;
 public class UsuarioBean {
 	
 	private Usuario usuario = new Usuario();
+	private Usuario usuarioRegistrado = new Usuario();
 	
 	public String salvar() {
 		UsuarioDao.salvar(usuario);
@@ -29,6 +30,21 @@ public class UsuarioBean {
 
 	public void setUsuario(Usuario usuario) {
 		this.usuario = usuario;
+	}
+	
+	public Usuario getUsuarioRegistrado() {
+		this.setUsuarioRegistrado();
+		return usuarioRegistrado;
+	}
+	
+	public void setUsuarioRegistrado() {
+		usuarioRegistrado.setNome("Thiago Felipe de Sousa Castro");
+		usuarioRegistrado.setCpf("077.380.503-65");
+		usuarioRegistrado.setEmail("thiagofelipesc@gmail.com");
+		usuarioRegistrado.setTelefone("(85)99191-3132");
+		usuarioRegistrado.setDataNascimento("24/04/2000");
+		usuarioRegistrado.setSexo("Masculino");
+		
 	}
 	
 	

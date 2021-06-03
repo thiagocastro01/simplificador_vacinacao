@@ -1,0 +1,39 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:p="http://primefaces.org/ui"	
+	xmlns:h="http://xmlns.jcp.org/jsf/html"
+	xmlns:f="http://xmlns.jcp.org/jsf/core">
+	
+	<h:head>
+	
+		<title>dashboard</title>
+	 	<link rel="stylesheet" type="text/css" href="css/estilo.css"/>
+	</h:head>
+	
+	<h:body>
+		<p:panelGrid columns="2" style="width:600px; color: green" class="container">
+		
+					<p:outputLabel value="Nome completo:"/>
+					<p:outputLabel value="#{usuarioBean.usuarioRegistrado.nome}"/>
+					
+					<p:outputLabel value="CPF: "/>
+					<p:outputLabel value="#{usuarioBean.usuarioRegistrado.cpf}"/>
+		
+					<p:outputLabel value="Email:"/>
+					<p:outputLabel value="#{usuarioBean.usuarioRegistrado.email}"/>
+					
+					<p:outputLabel value="Telefone:"/>
+					<p:outputLabel value="#{usuarioBean.usuarioRegistrado.telefone}"/>
+					
+					<p:outputLabel value="Sexo:"/>
+					<p:outputLabel value="#{usuarioBean.usuarioRegistrado.sexo}"/>
+			
+					<p:outputLabel value="Data de nascimento:"/>
+					<p:outputLabel value="#{usuarioBean.usuarioRegistrado.dataNascimento}"/>
+					
+				</p:panelGrid>
+	</h:body>
+
+</html>

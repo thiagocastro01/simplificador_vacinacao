@@ -1,0 +1,37 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:p="http://primefaces.org/ui"	
+	xmlns:h="http://xmlns.jcp.org/jsf/html"
+	xmlns:f="http://xmlns.jcp.org/jsf/core">
+	
+	<h:head>
+	
+		<title>dashboard</title>
+	 	<link rel="stylesheet" type="text/css" href="css/estilo.css"/>
+	</h:head>
+	
+	<h:body>
+		<div class="">
+    		<h:form>
+        		<p:growl>
+            		<p:autoUpdate/>
+        		</p:growl>
+
+        		<p:panelMenu style="width:300px">
+            		<p:submenu label="Meus dados">
+                		<p:menuitem value="Ver meus dados" outcome="listagemDados"/>
+                		<p:menuitem value="Atualizar meus dados" action="#{menuView.update}" icon="pi pi-refresh"/>
+            		</p:submenu>
+            		<p:submenu label="Vacinas">
+                		<p:menuitem value="Vacinas tomadas" outcome="vacinaSel" icon="pi pi-external-link"/>
+                		<p:menuitem value="Vacina vencidas" icon="pi pi-upload"/>
+                		<p:menuitem value="Próximas vacinas" icon="pi pi-upload"/>
+            		</p:submenu>
+        		</p:panelMenu>
+    		</h:form>
+		</div>
+	</h:body>
+
+</html>

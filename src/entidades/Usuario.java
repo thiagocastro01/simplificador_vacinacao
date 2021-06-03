@@ -70,8 +70,8 @@ public class Usuario {
 		return dataNascimento;
 	}
 	
-	public void setDataNascimento(String string) {
-		this.dataNascimento = dataNascimento;
+	public void setDataNascimento(String data) {
+		this.dataNascimento = data;
 	}
 	
 	public String getSexo() {
